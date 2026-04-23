@@ -1,5 +1,5 @@
 
-# Minimal MLP (Multi-Layer Perceptron) in C++
+# Autograd-Based Neural Network in C++
 
 A lightweight implementation of a fully-connected neural network built from scratch in C++. This project focuses on understanding how matrix-based layers form a working model rather than relying on external machine learning libraries. Autograd functionality inspired by Andrej Karpathy's micrograd.
 
@@ -135,7 +135,6 @@ After the forward pass produces a prediction, the network computes an error usin
 ```
 Forward pass:   input → layers → prediction
 Backward pass:  loss → gradients → parameter updates
-
 ```
 
 To support backpropagation, the network is treated as a directed acyclic graph (DAG) of computation nodes (layers).
@@ -156,10 +155,9 @@ Softmax binary cross entropy loss is also implemented
 
 Each layer computes how the loss changes with respect to its parameters:
 
-Backpropagation Through a Layer
+**Backpropagation Through a Layer**
 
 Each layer performs the following steps during backpropagation:
-
 
 1. Compute error signal
 ```
@@ -225,7 +223,8 @@ Typical architecture:
 MLP model(2, {2, 1}, 0.1);
 ```
 **Found in TestFile.cpp for quick testing**
-IMPORTANT: For quick XOR training, set SIGMOID activation in MLP::forward.
+
+IMPORTANT: For XOR training, set SIGMOID activation in MLP::forward.
            Loss uses binary cross entropy loss
 ```
 if (i == layers.size() - 1) // last layer activation
@@ -262,7 +261,8 @@ Training goal:
 * Learn to map pixel data → correct digit classification
 
 **Found in TestFile.cpp for quick testing**
-IMPORTANT: For quick MNIST training, set RELU activation in MLP::forward and last layer to empty. Loss uses softmax cross entropy loss
+
+IMPORTANT: For MNIST training, set RELU activation in MLP::forward and last layer to empty. Loss uses softmax cross entropy loss
 ```
 if (i == layers.size() - 1) // last layer activation
 {
