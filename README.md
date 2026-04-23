@@ -1,12 +1,12 @@
 
-# Autograd-Based Neural Network in C++
+# Autograd-Based Neural Network Library in C++
 
-A lightweight implementation of a fully-connected neural network built from scratch in C++. This project focuses on understanding how matrix-based layers form a working model rather than relying on external machine learning libraries. Autograd functionality inspired by Andrej Karpathy's micrograd.
+A lightweight C++ neural network built from scratch, featuring an autograd engine and matrix-based layers. This project focuses on neural network training and how models learn internally rather than relying on external machine learning libraries. Autograd functionality inspired by Andrej Karpathy's micrograd.
 
 ![Loss decreasing and accuracy increasing as model learns from MNIST dataset](./ml.gif)
 
 **Note:** 
-To run the MNIST model, you'll have to obtain the csv files from https://github.com/cvdfoundation/mnist/blob/master/README.md, and place them in the same directory as the project
+To run the MNIST model, you'll have to obtain the csv files from https://github.com/cvdfoundation/mnist/tree/master, and place them in the same directory as the project
 
 ---
 
