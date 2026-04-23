@@ -144,7 +144,7 @@ A topological sort is performed to determine a valid forward execution order.
 Backpropagation then follows the reverse of this ordering to correctly compute gradients.
 
 
-#Loss Function
+# Loss Function
 
 For simple regression-style training (used in XOR and similar tests), the loss is typically Mean Squared Error:
 
@@ -271,7 +271,7 @@ else
 {
   input = Activation::nActivationFnc[ActivationType::RELU](input);
 }
-
+```
 ---
 
 ## Implementation Notes
